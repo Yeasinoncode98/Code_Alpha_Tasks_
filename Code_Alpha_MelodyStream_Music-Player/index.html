@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MelodyStream - Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="site-title"><i class="fas fa-headphones"></i> MelodyStream</h1>
+            <nav>
+                <a href="#trending">Trending</a>
+                <a href="#discover">Discover</a>
+                <a href="#mymusic">My Music</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="site-container">
+
+        <div class="player-container">
+            <div class="img-container">
+                <img src="https://via.placeholder.com/150x150?text=Album+Art" alt="Album Art" id="cover">
+            </div>
+
+            <h2 id="title">Song Title</h2>
+            <h3 id="artist">Artist Name</h3>
+
+            <audio src="audio/song1.mp3" id="audio"></audio>
+
+            <div class="progress-container" id="progress-container">
+                <div class="progress" id="progress"></div>
+                <div class="time-info">
+                    <span id="current-time">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="prev" class="control-btn prev-next">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button id="play" class="control-btn main-control">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="next" class="control-btn prev-next">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+
+            <div class="volume-container">
+                <i class="fas fa-volume-down"></i>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.7">
+                <i class="fas fa-volume-up"></i>
+            </div>
+
+            <button id="playlist-btn" class="playlist-toggle-btn">
+                <i class="fas fa-list"></i> Show Playlist
+            </button>
+
+            <div class="playlist-modal" id="playlist-modal">
+                <h3>Playlist</h3>
+                <ul id="playlist">
+                </ul>
+            </div>
+        </div>
+
+        <main id="trending" class="trending-section">
+            <h2>🔥 Trending Now</h2>
+            <div class="card-grid">
+
+                <div class="song-card">
+                    <img src="https://i.postimg.cc/XJ0JmS23/download-(1).webp" alt="Trending Album 1">
+                    <div class="card-info">
+                        <h4>Bapuram Sapure || বাপুরাম সাপুড়ে</h4>
+                        <p>Artist: Fuad Feat Mila</p>
+                        <span class="play-icon"><i class="fas fa-play-circle"></i></span>
+                    </div>
+                </div>
+
+                <div class="song-card">
+                    <img src="https://i.postimg.cc/zXHsbbzF/OIP-(1).webp" alt="Trending Album 2">
+                    <div class="card-info">
+                        <h4>Lady Killer Romeo</h4>
+                        <p>Artist: Jeet Gannguli</p>
+                        <span class="play-icon"><i class="fas fa-play-circle"></i></span>
+                    </div>
+                </div>
+
+                <div class="song-card">
+                    <img src="https://i.postimg.cc/vmTkycN6/OIP-(3).jpg" alt="Trending Album 3">
+                    <div class="card-info">
+                        <h4>Chikni Chameli</h4>
+                        <p>Artist: Agneepath | Shreya Ghoshal | Ajay-Atul</p>
+                        <span class="play-icon"><i class="fas fa-play-circle"></i></span>
+                    </div>
+                </div>
+
+                <div class="song-card">
+                    <img src="https://i.postimg.cc/K8wrKjYg/th.webp" alt="Trending Album 4">
+                    <div class="card-info">
+                        <h4>Badtameez Dil</h4>
+                        <p>Artist: PRITAM</p>
+                        <span class="play-icon"><i class="fas fa-play-circle"></i></span>
+                    </div>
+                </div>
+                <div class="song-card">
+                    <img src="https://i.postimg.cc/y8pjKn96/OIP-(4).jpg" alt="Trending Album 4">
+                    <div class="card-info">
+                        <h4>Tere Liye</h4>
+                        <p>Artist: Vivek Oberoi | Atif Aslam, Shreya Ghoshal</p>
+                        <span class="play-icon"><i class="fas fa-play-circle"></i></span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Discover Section with Maintenance Banner -->
+    <section id="discover" class="maintenance-section">
+        <div class="site-container">
+            <div class="maintenance-banner">
+                <div class="icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h2>Under Maintenance</h2>
+                <p>We're working hard to bring you an amazing discovery experience.<br>This section will be updated
+                    soon!</p>
+                <span class="coming-soon">🚀 Coming Soon</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Music Section - Shows Currently Playing Song -->
+    <section id="mymusic" class="maintenance-section">
+        <div class="mymusic-container">
+            <h2 class="mymusic-title">🎵 Now Playing</h2>
+            <div class="current-song-card">
+                <img id="mymusic-cover" src="" alt="Now Playing">
+                <div class="current-song-info">
+                    <h3 id="mymusic-title">Loading...</h3>
+                    <p id="mymusic-artist">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 MelodyStream. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

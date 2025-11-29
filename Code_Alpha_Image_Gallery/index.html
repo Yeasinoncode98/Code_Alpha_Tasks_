@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Image Gallery</title>
+    <!-- CSS is now embedded in the style block -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Explore Gallery</h1>
+            <p class="subtitle">Curated collection of stunning visuals</p>
+        </header>
+
+        <nav class="filter-nav">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="urban">Urban</button>
+            <button class="filter-btn" data-filter="abstract">Abstract</button>
+            <button class="filter-btn" data-filter="portrait">Portrait</button>
+        </nav>
+
+        <!-- Gallery Navigation Buttons to cycle between filters -->
+        <div class="gallery-nav-buttons">
+            <button class="gallery-nav-btn" id="galleryPrevBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                <span>Previous Category</span>
+            </button>
+            <button class="gallery-nav-btn" id="galleryNextBtn">
+                <span>Next Category</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <div class="gallery" id="galleryGrid">
+            <!-- Image data attributes are used for filtering -->
+            <div class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Mountain Landscape">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Mountain Vista</h3>
+                        <p>Nature</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="urban">
+                <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800" alt="City Skyline">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>City Lights</h3>
+                        <p>Urban</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="abstract">
+                <img src="https://images.unsplash.com/photo-1557672172-298e090bd0f1?w=800" alt="Abstract Art">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Color Flow</h3>
+                        <p>Abstract</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800" alt="Forest">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Misty Forest</h3>
+                        <p>Nature</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="portrait">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800" alt="Portrait">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Character Study</h3>
+                        <p>Portrait</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="urban">
+                <img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?w=800" alt="Urban Architecture">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Modern Lines</h3>
+                        <p>Urban</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="abstract">
+                <img src="https://images.unsplash.com/photo-1550859492-d5da9d8e45f3?w=800" alt="Abstract Pattern">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Geometric Dream</h3>
+                        <p>Abstract</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800" alt="Lake">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Serene Waters</h3>
+                        <p>Nature</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="portrait">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800" alt="Portrait">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Natural Beauty</h3>
+                        <p>Portrait</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="urban">
+                <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800" alt="Street Scene">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Urban Life</h3>
+                        <p>Urban</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="abstract">
+                <img src="https://images.unsplash.com/photo-1506792006437-256b665541e2?w=800" alt="Abstract Colors">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Vibrant Hues</h3>
+                        <p>Abstract</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800" alt="Nature Path">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Forest Trail</h3>
+                        <p>Nature</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- START OF UPDATED FOOTER STRUCTURE (to match the advanced CSS) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-logo">GalleryPro</h3>
+                <p class="footer-description">Showcasing the world's most breathtaking moments captured by our talented
+                    artists.</p>
+                <div class="social-links">
+                    <!-- Placeholder social links -->
+                    <a href="#" class="social-link" aria-label="Twitter">X</a>
+                    <a href="#" class="social-link" aria-label="Instagram">IG</a>
+                    <a href="#" class="social-link" aria-label="Facebook">FB</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">About Us</a></li>
+                    <li><a href="#" class="footer-link">Submit Work</a></li>
+                    <li><a href="#" class="footer-link">Partnerships</a></li>
+                    <li><a href="#" class="footer-link">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Newsletter</h3>
+                <p class="newsletter-text">Subscribe for exclusive updates and new image drops.</p>
+                <!-- NOTE: Added onsubmit handler to prevent form submission and show a message -->
+                <form class="newsletter-form"
+                    onsubmit="event.preventDefault(); document.getElementById('newsletter-status').textContent = 'Subscribed! Thank you!';">
+                    <input type="email" placeholder="Your Email" class="newsletter-input" required
+                        aria-label="Email address for newsletter">
+                    <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+                        <!-- Send icon -->
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </button>
+                </form>
+                <p id="newsletter-status" class="copyright" style="margin-top: 0.5rem;"></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2024 GalleryPro. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                <span class="divider">|</span>
+                <a href="#" class="footer-bottom-link">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
+    <!-- END OF UPDATED FOOTER -->
+
+
+    <div class="lightbox" id="lightbox">
+        <button class="close-btn" id="closeBtn" aria-label="Close Lightbox">&times;</button>
+        <button class="nav-btn prev-btn" id="prevBtn" aria-label="Previous Image">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <button class="nav-btn next-btn" id="nextBtn" aria-label="Next Image">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImg">
+            <div class="lightbox-info">
+                <h2 id="lightboxTitle"></h2>
+                <p id="lightboxCategory"></p>
+            </div>
+        </div>
+        <div class="image-counter" id="imageCounter"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const gallery = document.getElementById('galleryGrid');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            const lightboxTitle = document.getElementById('lightboxTitle');
+            const lightboxCategory = document.getElementById('lightboxCategory');
+            const closeBtn = document.getElementById('closeBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const imageCounter = document.getElementById('imageCounter');
+            const galleryPrevBtn = document.getElementById('galleryPrevBtn');
+            const galleryNextBtn = document.getElementById('galleryNextBtn');
+
+            let currentIndex = 0;
+            let visibleItems = Array.from(galleryItems);
+
+            const filterCategories = ['all', 'nature', 'urban', 'abstract', 'portrait'];
+            let currentFilterIndex = 0;
+
+            // --- Filter functionality ---
+            filterBtns.forEach((btn, index) => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.dataset.filter;
+
+                    // Update active button state
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    // Update current filter index for navigation
+                    currentFilterIndex = index;
+
+                    // 1. Determine visible items
+                    if (filter === 'all') {
+                        visibleItems = Array.from(galleryItems);
+                    } else {
+                        visibleItems = Array.from(galleryItems).filter(item =>
+                            item.dataset.category === filter
+                        );
+                    }
+
+                    // 2. Clear gallery and update
+                    showFilteredItems();
+                    updateGalleryNavButtons();
+                    attachLightboxListeners();
+                });
+            });
+
+            // Function to display items based on the current filter
+            function showFilteredItems() {
+                // Hide all items initially for a smooth transition effect
+                galleryItems.forEach(item => {
+                    item.style.display = 'none';
+                    item.classList.remove('fade-in');
+                });
+
+                if (visibleItems.length === 0) {
+                    gallery.innerHTML = '<p style="text-align: center; color: var(--text-gray); padding: 40px; font-size: 1.1em; grid-column: 1 / -1;">No images found for this category. Try another filter!</p>';
+                } else {
+                    // Re-append items in the correct order to the grid container
+                    gallery.innerHTML = '';
+                    visibleItems.forEach((item) => {
+                        gallery.appendChild(item);
+                        // Show with fade-in effect
+                        item.style.display = 'block';
+                        setTimeout(() => item.classList.add('fade-in'), 50);
+                    });
+                }
+            }
+
+
+            // --- Lightbox Listeners ---
+            function attachLightboxListeners() {
+                // Ensure correct index calculation for the lightbox
+                visibleItems.forEach((item, index) => {
+                    item.onclick = function () {
+                        const img = item.querySelector('img');
+                        const title = item.querySelector('h3').textContent;
+                        const category = item.querySelector('.overlay-content p').textContent;
+
+                        currentIndex = index; // Set current index based on position in *visible* list
+                        openLightbox(img.src, title, category);
+                    };
+                });
+            }
+
+            function openLightbox(src, title, category) {
+                lightboxImg.src = src;
+                lightboxTitle.textContent = title;
+                lightboxCategory.textContent = category;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                updateCounter();
+            }
+
+            closeBtn.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (e) => {
+                // Close only if the backdrop itself is clicked, not children
+                if (e.target === lightbox) closeLightbox();
+            });
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+
+            // --- Lightbox Navigation ---
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (visibleItems.length === 0) return;
+                currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+                updateLightboxImage();
+            });
+
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (visibleItems.length === 0) return;
+                currentIndex = (currentIndex + 1) % visibleItems.length;
+                updateLightboxImage();
+            });
+
+            function updateLightboxImage() {
+                const item = visibleItems[currentIndex];
+                const img = item.querySelector('img');
+                const title = item.querySelector('h3').textContent;
+                const category = item.querySelector('.overlay-content p').textContent;
+
+                // Simple fade transition for image swap
+                lightboxImg.style.opacity = '0';
+                setTimeout(() => {
+                    lightboxImg.src = img.src;
+                    lightboxTitle.textContent = title;
+                    lightboxCategory.textContent = category;
+                    lightboxImg.style.opacity = '1';
+                    updateCounter();
+                }, 200);
+            }
+
+            function updateCounter() {
+                imageCounter.textContent = `${currentIndex + 1} / ${visibleItems.length}`;
+            }
+
+            // --- Keyboard Controls ---
+            document.addEventListener('keydown', (e) => {
+                if (!lightbox.classList.contains('active')) return;
+
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') prevBtn.click();
+                if (e.key === 'ArrowRight') nextBtn.click();
+            });
+
+
+            // --- Category Cycling Navigation (Prev/Next buttons above gallery) ---
+            function updateGalleryNavButtons() {
+                galleryPrevBtn.disabled = (currentFilterIndex === 0);
+                galleryPrevBtn.style.opacity = (currentFilterIndex === 0) ? '0.5' : '1';
+
+                galleryNextBtn.disabled = (currentFilterIndex === filterCategories.length - 1);
+                galleryNextBtn.style.opacity = (currentFilterIndex === filterCategories.length - 1) ? '0.5' : '1';
+            }
+
+            galleryPrevBtn.addEventListener('click', () => {
+                if (currentFilterIndex > 0) {
+                    currentFilterIndex--;
+                    const filterToApply = filterCategories[currentFilterIndex];
+
+                    // Find and click the corresponding filter button to trigger the filter logic
+                    const targetBtn = document.querySelector(`.filter-btn[data-filter="${filterToApply}"]`);
+                    if (targetBtn) {
+                        targetBtn.click();
+                        window.scrollTo({ top: 300, behavior: 'smooth' });
+                    }
+                }
+            });
+
+            galleryNextBtn.addEventListener('click', () => {
+                if (currentFilterIndex < filterCategories.length - 1) {
+                    currentFilterIndex++;
+                    const filterToApply = filterCategories[currentFilterIndex];
+
+                    // Find and click the corresponding filter button to trigger the filter logic
+                    const targetBtn = document.querySelector(`.filter-btn[data-filter="${filterToApply}"]`);
+                    if (targetBtn) {
+                        targetBtn.click();
+                        window.scrollTo({ top: 300, behavior: 'smooth' });
+                    }
+                }
+            });
+
+
+            // Initialize the gallery on load
+            showFilteredItems();
+            updateGalleryNavButtons();
+            attachLightboxListeners();
+        });
+    </script>
+</body>
+
+</html>
